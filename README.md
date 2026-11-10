@@ -1,4 +1,4 @@
-# ⚡ VeritasNet
+# ⚡ BigBind
 
 > **Decentralized Proof-of-Training-Work (PoTW) & Enterprise MLOps Infrastructure**  
 > A Production-Grade Decentralized Training, Byzantine-Resilient Federated Learning, and High-Throughput Model Serving Platform built on **2026 MLOps Architectural Standards**.
@@ -13,7 +13,7 @@
 [![FastMCP](https://img.shields.io/badge/Tools-FastMCP-6366f1)](https://github.com/jlowin/fastmcp)
 [![PostgreSQL](https://img.shields.io/badge/Storage-PostgreSQL_16_%2B_pgvector-336791?logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector)
 [![Apache Airflow](https://img.shields.io/badge/Orchestration-Airflow_3.1-017cee?logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
-[![CI Gate](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/m-hesam-moradian/veritasnet/actions)
+[![CI Gate](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?logo=github-actions&logoColor=white)](https://github.com/m-hesam-moradian/bigbind/actions)
 [![Progress](https://img.shields.io/badge/Roadmap-Milestone_1_%7C_Step_1-orange)](#-live-engineering-progress-tracker)
 
 ---
@@ -86,27 +86,27 @@ Real-time session state is tracked in [`PROGRESS.md`](PROGRESS.md) and full tech
 ### 🌱 Milestone 1: Core Foundation, Verifiable Contracts & PoTW Engine
 | Step | Component | Technology | Target File | Issue | Status |
 | :---: | :--- | :--- | :--- | :---: | :---: |
-| **01** | Workspace Packaging & Type-Safe Config | `uv`, `pydantic-settings` | `src/veritas/config.py` | [#1](#) | 🟡 **In Progress** |
-| **02** | Strict Pydantic v2 Task Manifests & Merkle Schemas | `Pydantic v2` | `src/veritas/schemas/domain.py` | — | ⏳ Queued |
-| **03** | Cryptographic Merkle Tree & Verde Spot-Check Verifier | `hashlib`, `Cryptography` | `src/veritas/potw/verifier.py` | — | ⏳ Queued |
+| **01** | Workspace Packaging & Type-Safe Config | `uv`, `pydantic-settings` | `src/bigbind/config.py` | [#1](#) | 🟡 **In Progress** |
+| **02** | Strict Pydantic v2 Task Manifests & Merkle Schemas | `Pydantic v2` | `src/bigbind/schemas/domain.py` | — | ⏳ Queued |
+| **03** | Cryptographic Merkle Tree & Verde Spot-Check Verifier | `hashlib`, `Cryptography` | `src/bigbind/potw/verifier.py` | — | ⏳ Queued |
 
 ### ⛏️ Milestone 2: Deterministic Mining, Byzantine Defense & Economic Ledger
 | Step | Component | Technology | Target File | Status |
 | :---: | :--- | :--- | :--- | :---: |
-| **04** | Deterministic PyTorch + LoRA Miner Training Node | `PyTorch`, `PEFT` | `src/veritas/training/miner.py` | ⏳ Queued |
-| **05** | Byzantine Defense Engine (Multi-Krum + Cosine Guard) | `NumPy`, `SciPy` | `src/veritas/training/aggregator.py` | ⏳ Queued |
-| **06** | Economic Consensus, Staking Vault & Slashing Ledger | `Yuma / Shapley Consensus` | `src/veritas/ledger/consensus.py` | ⏳ Queued |
+| **04** | Deterministic PyTorch + LoRA Miner Training Node | `PyTorch`, `PEFT` | `src/bigbind/training/miner.py` | ⏳ Queued |
+| **05** | Byzantine Defense Engine (Multi-Krum + Cosine Guard) | `NumPy`, `SciPy` | `src/bigbind/training/aggregator.py` | ⏳ Queued |
+| **06** | Economic Consensus, Staking Vault & Slashing Ledger | `Yuma / Shapley Consensus` | `src/bigbind/ledger/consensus.py` | ⏳ Queued |
 
 ### 🗄️ Milestone 3: Storage Sovereignty & Agentic Governance
 | Step | Component | Technology | Target File | Status |
 | :---: | :--- | :--- | :--- | :---: |
-| **07** | PostgreSQL 16 + pgvector & MLflow v3 S3 Registry Client | `SQLAlchemy 2.0`, `pgvector`, `MLflow v3` | `src/veritas/db/registry.py` | ⏳ Queued |
-| **08** | FastMCP Tool Server & LangGraph Autonomous Audit Agent | `FastMCP`, `LangGraph` | `src/veritas/agents/audit_graph.py` | ⏳ Queued |
+| **07** | PostgreSQL 16 + pgvector & MLflow v3 S3 Registry Client | `SQLAlchemy 2.0`, `pgvector`, `MLflow v3` | `src/bigbind/db/registry.py` | ⏳ Queued |
+| **08** | FastMCP Tool Server & LangGraph Autonomous Audit Agent | `FastMCP`, `LangGraph` | `src/bigbind/agents/audit_graph.py` | ⏳ Queued |
 
 ### 🚀 Milestone 4: High-Concurrency Serving, Airflow & Production Deployment
 | Step | Component | Technology | Target File | Status |
 | :---: | :--- | :--- | :--- | :---: |
-| **09** | High-Concurrency FastAPI ASGI Gateway & Triton/vLLM Client | `FastAPI`, `Uvicorn`, `Triton Client` | `src/veritas/api/main.py` | ⏳ Queued |
+| **09** | High-Concurrency FastAPI ASGI Gateway & Triton/vLLM Client | `FastAPI`, `Uvicorn`, `Triton Client` | `src/bigbind/api/main.py` | ⏳ Queued |
 | **10** | Apache Airflow 3.1 Retraining Micro-DAG & Docker Cluster | `Airflow 3.1`, `Langfuse`, `Docker Compose` | `docker-compose.yml` | ⏳ Queued |
 
 ---

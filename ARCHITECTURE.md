@@ -1,4 +1,4 @@
-# ⚡ VeritasNet: Decentralized Proof-of-Training-Work (PoTW) & Enterprise MLOps Infrastructure
+# ⚡ BigBind: Decentralized Proof-of-Training-Work (PoTW) & Enterprise MLOps Infrastructure
 
 > **A Production-Grade Decentralized Training, Byzantine-Resilient Federated Learning, and High-Throughput Model Serving Platform** built on the **2026 MLOps Architectural Standards** (`LangGraph`, `FastMCP`, `FastAPI ASGI`, `NVIDIA Triton + vLLM`, `MLflow v3`, `Apache Airflow 3.1`, `PostgreSQL + pgvector + PostgresML`, `Apache Kafka`, and `OpenTelemetry + Langfuse`).
 
@@ -13,7 +13,7 @@ Training and fine-tuning foundation models (`LoRA / PEFT`) across distributed, u
 3. **The Python GIL & Workload Physics Bottleneck:** Serving both high-concurrency I/O coordination (node heartbeats, RAG lookups, agentic validation) and compute-bound GPU inference inside a single Python web framework causes severe thread starvation under the Global Interpreter Lock (GIL).
 4. **Experiment Tracker Vendor Lock-In & Data Loss:** Relying on proprietary cloud experiment trackers without customer-owned object storage sovereignty risks catastrophic loss of historical run lineage and model checkpoints.
 
-**VeritasNet** solves all four challenges through an end-to-end, cryptographically verifiable MLOps architecture.
+**BigBind** solves all four challenges through an end-to-end, cryptographically verifiable MLOps architecture.
 
 ---
 
@@ -133,7 +133,7 @@ Following the **2026 Storage Sovereignty Mandate** (preventing third-party SaaS 
 ---
 
 ### 3.6 Workload-Physics Serving Tier (`FastAPI ASGI` vs. `NVIDIA Triton` + `vLLM`)
-In accordance with the **2026 Serving Architecture Standard**, VeritasNet strictly separates **I/O-bound** traffic from **GPU/compute-bound** inference:
+In accordance with the **2026 Serving Architecture Standard**, BigBind strictly separates **I/O-bound** traffic from **GPU/compute-bound** inference:
 
 | Tier | Technology Stack | Workload Physics | Performance & Protocol |
 | :--- | :--- | :--- | :--- |
@@ -147,15 +147,15 @@ In accordance with the **2026 Serving Architecture Standard**, VeritasNet strict
 
 We build this system one module at a time using **Contract-First Design**, **Test-Driven Development (`pytest` Red ➡️ Green ➡️ Refactor)**, and **GitHub Issues/PRs**:
 
-- [ ] **Step 1:** Workspace Packaging (`pyproject.toml`, `uv`, `ruff`, `mypy`) & GitHub Actions CI (`src/veritas/config.py`)
-- [ ] **Step 2:** Strict `Pydantic v2` Schemas for Task Manifests, Merkle Proofs & Gradient Submissions (`src/veritas/schemas/domain.py`)
-- [ ] **Step 3:** Cryptographic Merkle Tree & *Verde* Single-Step PoTW Spot-Check Verifier (`src/veritas/potw/verifier.py`)
-- [ ] **Step 4:** Deterministic `PyTorch` + `LoRA (PEFT)` Miner Training Node (`src/veritas/training/miner.py`)
-- [ ] **Step 5:** Byzantine Defense Engine (`Multi-Krum`, Cosine Guard & Coordinate Trimmed Mean) (`src/veritas/training/aggregator.py`)
-- [ ] **Step 6:** Economic Consensus, Staking Vault & Automated Slashing Ledger (`src/veritas/ledger/consensus.py`)
-- [ ] **Step 7:** Unified `PostgreSQL 16` + `pgvector` Repository & `MLflow v3` S3 Registry Client (`src/veritas/db/registry.py`)
-- [ ] **Step 8:** `FastMCP` Tool Server & `LangGraph` Autonomous Audit/Rollback Orchestrator (`src/veritas/agents/audit_graph.py`)
-- [ ] **Step 9:** High-Concurrency `FastAPI` + `Uvicorn` ASGI Gateway & `vLLM`/`Triton` Client (`src/veritas/api/main.py`)
+- [ ] **Step 1:** Workspace Packaging (`pyproject.toml`, `uv`, `ruff`, `mypy`) & GitHub Actions CI (`src/bigbind/config.py`)
+- [ ] **Step 2:** Strict `Pydantic v2` Schemas for Task Manifests, Merkle Proofs & Gradient Submissions (`src/bigbind/schemas/domain.py`)
+- [ ] **Step 3:** Cryptographic Merkle Tree & *Verde* Single-Step PoTW Spot-Check Verifier (`src/bigbind/potw/verifier.py`)
+- [ ] **Step 4:** Deterministic `PyTorch` + `LoRA (PEFT)` Miner Training Node (`src/bigbind/training/miner.py`)
+- [ ] **Step 5:** Byzantine Defense Engine (`Multi-Krum`, Cosine Guard & Coordinate Trimmed Mean) (`src/bigbind/training/aggregator.py`)
+- [ ] **Step 6:** Economic Consensus, Staking Vault & Automated Slashing Ledger (`src/bigbind/ledger/consensus.py`)
+- [ ] **Step 7:** Unified `PostgreSQL 16` + `pgvector` Repository & `MLflow v3` S3 Registry Client (`src/bigbind/db/registry.py`)
+- [ ] **Step 8:** `FastMCP` Tool Server & `LangGraph` Autonomous Audit/Rollback Orchestrator (`src/bigbind/agents/audit_graph.py`)
+- [ ] **Step 9:** High-Concurrency `FastAPI` + `Uvicorn` ASGI Gateway & `vLLM`/`Triton` Client (`src/bigbind/api/main.py`)
 - [ ] **Step 10:** `Apache Airflow 3.1` Retraining Micro-DAG, `Langfuse` Tracing & `Docker Compose` Cluster (`docker-compose.yml`)
 
 ---
