@@ -9,18 +9,18 @@
 | Attribute | Current Value | Description |
 | :--- | :--- | :--- |
 | **Active Milestone** | **Milestone 1: Core Foundation, Packaging & Config** | Workspace packaging, type-safe settings, domain schemas, spot-check verifier |
-| **Active Step** | **Step 1: Workspace Packaging & Type-Safe Config** | `pyproject.toml` + `src/veritasnet/config.py` |
-| **Active Phase** | **Phase D: Verification Gate & Chaos Lab** | Answering architectural questions and running the 30-second break-it test |
-| **Git Branch** | `feat/issue-1-config-foundation` | Feature branch for Step 1 |
-| **GitHub Issue** | `#1` | [Issue #1](https://github.com/m-hesam-moradian/veritasnet/issues/1) linked to Milestone 1 |
-| **State Status** | 🟢 Green Phase Verified ➔ Phase D Active | Verification & chaos experiment |
+| **Active Step** | **Step 2: Environment Overrides, Range Validation & Secrets** | `src/veritasnet/config.py` (SecretStr, Port ranges, .env loading) |
+| **Active Phase** | **Phase 0: Options Brief & GitHub Issue Setup** | Ready to kick off Step 2 |
+| **Git Branch** | `main` | Clean on main |
+| **GitHub Issue** | `#1` (Closed via PR #4) | Issue #1 complete |
+| **State Status** | 🟢 Step 1 Complete & Merged ➔ Ready for Step 2 | Next: Port range validation & SecretStr |
 
 ---
 
 ## ⏭️ Immediate Next Action (Cold-Start Pointer)
-1. Present the **Engineering Options Menu** for Step 1 (`pydantic-settings` vs. `dynaconf` vs. `hydra` + packaging with `uv`).
-2. Run `gh issue create` to create GitHub Issue #1.
-3. Check out branch `feat/issue-1-config-foundation` to begin Phase 0.
+1. Branch out for Step 2 (`feat/issue-2-config-validation-secrets`).
+2. Add port range constraints (`ge=1024, le=65535`) and secret masking (`SecretStr`).
+3. Add TDD red tests for invalid ports, missing secrets, and `.env` loading.
 
 ---
 
@@ -28,7 +28,8 @@
 | Timestamp | Step / Component | Decision Made | Rationale |
 | :--- | :--- | :--- | :--- |
 | 2026-11-08 | System / Mentor | Implemented Dual-Sync Session Protocol (`PROGRESS.md` + GitHub Issues/Milestones) | Solves chat context loss; allows instant cold resumption in new chats while displaying live progress on GitHub. |
-| 2026-11-10 | Architecture / Spec | Aligned to veritasnet Decentralized PoTW & 2026 MLOps Standards | Comprehensive enterprise MLOps platform (Triton, vLLM, MLflow v3, Airflow 3.1, pgvector, LangGraph). |
+| 2026-11-10 | Architecture / Spec | Aligned to VeritasNet Decentralized PoTW & 2026 MLOps Standards | Comprehensive enterprise MLOps platform (Triton, vLLM, MLflow v3, Airflow 3.1, pgvector, LangGraph). |
+| 2026-11-14 | Step 1 / Config | Standardized on `pyproject.toml` (PEP 518/621) + `pydantic-settings` v2 | Guarantees immutable, type-safe settings with zero global side-effects. |
 
 ---
 
@@ -37,16 +38,16 @@
 ### 🌱 Milestone 1: Core Foundation, Verifiable Contracts & PoTW Engine
 *GitHub Milestone: `Milestone 1: Core Foundation`*
 
-- [ ] **Step 1: Workspace Packaging & Type-Safe Config**
+- [x] **Step 1: Workspace Packaging & Type-Safe Config**
   - **Path:** `pyproject.toml`, `src/veritasnet/config.py`
-  - **Issue:** `#1` | **PR:** `—`
-  - **Checklist:** `[x] Phase 0` | `[x] Phase A` | `[ ] Phase B` | `[ ] Phase C` | `[ ] Phase D` | `[ ] Phase E`
-  - **Status:** 🟡 In Progress (Branch: `feat/issue-1-config-foundation`)
+  - **Issue:** `#1` (Closed) | **PR:** `#4` (Merged)
+  - **Checklist:** `[x] Phase 0` | `[x] Phase A` | `[x] Phase B` | `[x] Phase C` | `[x] Phase D` | `[x] Phase E`
+  - **Status:** 🟢 **DONE**
 - [ ] **Step 2: Strict Pydantic v2 Schemas for Task Manifests & Merkle Proofs**
   - **Path:** `src/veritasnet/schemas/domain.py`
   - **Issue:** `#2` | **PR:** `—`
   - **Checklist:** `[ ] Phase 0` | `[ ] Phase A` | `[ ] Phase B` | `[ ] Phase C` | `[ ] Phase D` | `[ ] Phase E`
-  - **Status:** ⏳ Queued
+  - **Status:** 🟡 Up Next
 - [ ] **Step 3: Cryptographic Merkle Tree & Verde Single-Step PoTW Verifier**
   - **Path:** `src/veritasnet/potw/verifier.py`
   - **Issue:** `#3` | **PR:** `—`
