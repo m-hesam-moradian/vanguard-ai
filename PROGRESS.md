@@ -10,10 +10,10 @@
 | :--- | :--- | :--- |
 | **Active Milestone** | **Milestone 1: Core Foundation, Packaging & Config** | Workspace packaging, type-safe settings, domain schemas, spot-check verifier |
 | **Active Step** | **Step 1: Workspace Packaging & Type-Safe Config** | `pyproject.toml` + `src/veritasnet/config.py` |
-| **Active Phase** | **Phase B: TDD Red Phase (pytest)** | Writing the failing config test file |
+| **Active Phase** | **Phase D: Verification Gate & Chaos Lab** | Answering architectural questions and running the 30-second break-it test |
 | **Git Branch** | `feat/issue-1-config-foundation` | Feature branch for Step 1 |
 | **GitHub Issue** | `#1` | [Issue #1](https://github.com/m-hesam-moradian/veritasnet/issues/1) linked to Milestone 1 |
-| **State Status** | 🟢 Environment Ready ➔ Phase B Active | Writing our failing test first |
+| **State Status** | 🟢 Green Phase Verified ➔ Phase D Active | Verification & chaos experiment |
 
 ---
 
